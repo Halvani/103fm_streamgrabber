@@ -19,7 +19,6 @@ def url2html(url):
 
 def download_url(url, filename):
     response = requests.get(url)
-    #response = requests.get(url, headers={'Connection': 'close'})
     if response.status_code == 200:
         with open(filename, 'wb') as file:
             file.write(response.content)
@@ -70,7 +69,6 @@ def download_all_streams(episodes, dest_path, open_download_folder=True):
     if open_download_folder: webbrowser.open(dest_path)
 
 
-
 #---------------------------------------------------------------------------------------
 # Define episodes-urls: To add more lookup_ https://103fm.maariv.co.il/programs/ and add you respective show unter the menu: "תוכניות"
 #---------------------------------------------------------------------------------------
@@ -87,5 +85,5 @@ episodes.update({var_name(caraso):iris_kol})
 #---------------------------------------------------------------------------------------
 
 
-dest_path = r"C:\_________103FM !"
+dest_path = r"ENTER_DESTINATION_PATH_HERE"
 download_all_streams(episodes, dest_path)
