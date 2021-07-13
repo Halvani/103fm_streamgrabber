@@ -3,11 +3,15 @@
 This small script downloads episodes of arbitrary radio shows from the 103fm website: https://103fm.maariv.co.il/.
 
 Currently, four radio shows are predefined, which can be extended easily by simply selecting the desired radio show under: 
-https://103fm.maariv.co.il/programs/
+https://103fm.maariv.co.il/programs
+
+Have fun 😉
 
 
 # Dependencies:
 -----------------------------------------
 Requests --> pip install requests
-
 BeautifulSoup --> pip install beautifulsoup4
+
+Inspect --> The Python Standard Library: https://docs.python.org/3/library/inspect.html#module-inspect
+Webbrowser --> The Python Standard Library: https://docs.python.org/3/library/webbrowser.html#module-webbrowser
