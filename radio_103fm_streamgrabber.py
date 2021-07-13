@@ -19,6 +19,7 @@ def url2html(url):
 
 def download_url(url, filename):
     response = requests.get(url)
+    #response = requests.get(url, headers={'Connection': 'close'})
     if response.status_code == 200:
         with open(filename, 'wb') as file:
             file.write(response.content)
@@ -32,7 +33,7 @@ def construct_episode_url4download(single_episode_url):
     html = url2html(single_episode_url)
     soup = BeautifulSoup(html, "lxml")
     data_file = soup.find_all('div', class_='mouthjs-autoplay')[0]['data-file']
-    stream_download_url = f"http://103fm_aod_main.streamgates.net/103fm_aod/{data_file}.mp3"
+    stream_download_url = f"https://awaod01.streamgates.net/103fm_aw/{data_file}.mp3" 
     return stream_download_url
 
 
@@ -69,6 +70,7 @@ def download_all_streams(episodes, dest_path, open_download_folder=True):
     if open_download_folder: webbrowser.open(dest_path)
 
 
+
 #---------------------------------------------------------------------------------------
 # Define episodes-urls: To add more lookup_ https://103fm.maariv.co.il/programs/ and add you respective show unter the menu: "תוכניות"
 #---------------------------------------------------------------------------------------
@@ -81,7 +83,7 @@ episodes = dict()
 episodes.update({var_name(zehavi):zehavi})
 episodes.update({var_name(didi):didi})
 episodes.update({var_name(caraso):caraso})
-episodes.update({var_name(caraso):iris_kol})
+episodes.update({var_name(iris_kol):iris_kol})
 #---------------------------------------------------------------------------------------
 
 
