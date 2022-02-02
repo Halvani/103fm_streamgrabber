@@ -1,5 +1,5 @@
 # 103fm StreamGrabber
-This small script downloads episodes of arbitrary radio shows from the 103fm website: https://103fm.maariv.co.il/
+This small script downloads episodes of arbitrary radio shows from the 103fm website: https://103fm.maariv.co.il
 
 Currently a dictionary of five radio shows is predefined, which can be extended easily. <br>
 For this, you first have to select your favorite radio show under https://103fm.maariv.co.il/programs 
